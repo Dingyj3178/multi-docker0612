@@ -16,4 +16,4 @@ after_sucess:
   - docker push dingyj3178/multi-client
   - docker push dingyj3178/multi-nginx
   - docker push dingyj3178/multi-server
-  - docker push dingyj3178/multi-server
+  - docker push dingyj3178/multi-worker
