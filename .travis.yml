@@ -6,14 +6,14 @@ before -install:
 script:
   - docker run dingyj3178/react-test npm test -- --coverage
 after_sucess:
-  - docker build -t shunabe1234/multi-client ./client
-  - docker build -t shunabe1234/multi-nginx ./nginx
-  - docker build -t shunabe1234/multi-server ./server
-  - docker build -t shunabe1234/multi-worker ./worker
+  - docker build -t dingyj3178/multi-client ./client
+  - docker build -t dingyj3178/multi-nginx ./nginx
+  - docker build -t dingyj3178/multi-server ./server
+  - docker build -t dingyj3178/multi-worker ./worker
   # log in docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # take images and push them to docker hub
-  - docker push -t shunabe1234/multi-client ./client
-  - docker push -t shunabe1234/multi-nginx ./nginx
-  - docker build -t shunabe1234/multi-server ./server
-  - docker build -t shunabe1234/multi-server ./worker
+  - docker push -t dingyj3178/multi-client ./client
+  - docker push -t dingyj3178/multi-nginx ./nginx
+  - docker build -t dingyj3178/multi-server ./server
+  - docker build -t dingyj3178/multi-server ./worker
